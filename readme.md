@@ -81,5 +81,6 @@ Jika Anda menggunakan Gmail untuk mengirim email, Anda perlu menggunakan passwor
 Pastikan untuk mengganti baris berikut di `email.php` dengan informasi akun email Anda dan password aplikasi yang telah dibuat:
 
 ```php
-$mail->Username = 'cholismjd571@gmail.com'; // Ganti dengan email Anda
+$mail->Username = 'your-email@gmail.com'; // Ganti dengan email Anda
 $mail->Password = 'your-app-password'; // Ganti dengan password aplikasi yang dihasilkan
+$mail->addAddress('your-email@gmail.com'); // Ganti dengan email Anda
