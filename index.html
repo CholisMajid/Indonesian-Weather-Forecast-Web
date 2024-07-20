@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramalan Cuaca Indonesia</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 text-center">Ramalan Cuaca Indonesia</h1>
+        <form id="weather-form" class="mt-4">
+            <div class="form-group">
+                <label for="city">Pilih Kota:</label>
+                <input type="text" id="city" class="form-control" placeholder="Masukkan nama kota" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Lihat Ramalan Cuaca</button>
+        </form>
+        <div id="weather-result" class="mt-5"></div>
+    </div>
+
+    <footer class="footer bg-light text-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mt-5">Kirim Feedback</h2>
+                    <form id="contact-form" action="email.php" method="post" class="mt-4">
+                        <div class="form-group">
+                            <label for="name">Nama:</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan:</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Kirim</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mt-5">Informasi Pembuat</h2>
+                    <table class="mt-4" style="border: 0;">
+                        <tr>
+                            <td>Nama</td>
+                            <td>: Muhammad Noor Cholis Majid</td>
+                        </tr>
+                        <tr>
+                            <td>NIM</td>
+                            <td>: 215610084</td>
+                        </tr>
+                        <tr>
+                            <td>Kelas</td>
+                            <td>: SI-2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel">Status Pengiriman</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="feedbackModalBody">
+                    <!-- Message will be inserted here by JavaScript -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

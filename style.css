@@ -1,0 +1,51 @@
+body {
+    background: url('https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+#weather-result {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+.forecast-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.forecast-item {
+    flex: 0 0 auto;
+    width: 120px;
+    text-align: center;
+    margin-right: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer h2 {
+    color: #007bff;
+}
+
+.footer .btn {
+    background-color: #007bff;
+    border-color: #007bff;
+}
