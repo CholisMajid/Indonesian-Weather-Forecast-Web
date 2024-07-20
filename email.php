@@ -17,13 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'cholismjd571@gmail.com'; // Ganti dengan email Anda
-        $mail->Password = 'qwbl fmst gvpl qyrk'; // Ganti dengan password aplikasi 
+        $mail->Username = 'your-email@gmail.com'; // Ganti dengan email Anda
+        $mail->Password = 'your-app-password'; // Ganti dengan password aplikasi 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         $mail->setFrom($email, $name);
-        $mail->addAddress('cholismjd571@gmail.com');
+        $mail->addAddress('your-email@gmail.com'); // Ganti dengan email Anda
         $mail->isHTML(false);
         $mail->Subject = "Pesan dari $name";
         $mail->Body = "Nama: $name\nEmail: $email\n\nPesan:\n$message";
